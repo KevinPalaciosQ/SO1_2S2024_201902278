@@ -14,8 +14,8 @@ for i in $(seq 1 $num_containers); do
     # Generar un nombre aleatorio
     name=$(cat /dev/urandom | tr -dc "$chars" | head -c $name_length)
 
-    # Crear el contenedor usando la imagen Alpine
-    docker run -d --name "$name" alpine
+    # Crear el contenedor usando la imagen Alpine con sudo
+    sudo docker run -d --name "$name" alpine
 
     # Mostrar el nombre del contenedor creado
     echo "Contenedor $i creado con nombre: $name"
