@@ -1,3 +1,4 @@
-# SO1_2S2024_201902278
-## Tareas
-## Practica 1
+# 💻Laboratorio de Sistemas Operativos 1
+|🎓Nombre                           |📛Carné       |
+|-----------------------------------|--------------|
+| Kevin Estuardo Palacios Quiñonez  | 201902278    |
