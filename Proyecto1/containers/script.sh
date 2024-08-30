@@ -1,3 +1,12 @@
+#!/bin/bash
+
+# Lista de imagenes
+images=(
+    "low_image"
+    "high_image"
+)
+
+# Crear una lista de 10 imagenes seleccionadas aleatoriamente
 selected_images=()
 for ((i=0; i<10; i++)); do
     selected_images+=("${images[RANDOM % ${#images[@]}]}")
