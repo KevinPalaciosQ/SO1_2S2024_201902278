@@ -1,0 +1,1 @@
+savedcmd_/home/kev/Documentos/SO1_2S2024_201902278/Proyecto1/proc/sysinfo_201902278.mod := printf '%s\n'   sysinfo_201902278.o | awk '!x[$$0]++ { print("/home/kev/Documentos/SO1_2S2024_201902278/Proyecto1/proc/"$$0) }' > /home/kev/Documentos/SO1_2S2024_201902278/Proyecto1/proc/sysinfo_201902278.mod

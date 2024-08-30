@@ -35,7 +35,7 @@ static char *get_process_cmdline(struct task_struct *task) {
     int i, len;
 
 
-    cmdline = kmalloc(MAX_CMDLINE_LENGTH, GFP_KERNEL);
+    cmdline = kmalloc(MAX_CMDLINE_LENGTH, GFP_KERNEL);//reservar espacio en memoria
     if (!cmdline)
         return NULL;
 
@@ -45,13 +45,13 @@ static char *get_process_cmdline(struct task_struct *task) {
         return NULL;
     }
 
-    down_read(&mm->mmap_lock);
+    down_read(&mm->mmap_lock);//bloquear la lectura
     arg_start = mm->arg_start;
     arg_end = mm->arg_end;
     env_start = mm->env_start;
-    up_read(&mm->mmap_lock);
+    up_read(&mm->mmap_lock);//desbloquear la memoria
 
-    len = arg_end - arg_start;
+    len = arg_end - arg_start;//calcular el tamaño del string
 
     if (len > MAX_CMDLINE_LENGTH - 1)
         len = MAX_CMDLINE_LENGTH - 1;
@@ -59,7 +59,7 @@ static char *get_process_cmdline(struct task_struct *task) {
 
     if (access_process_vm(task, arg_start, cmdline, len, 0) != len) {
         mmput(mm);
-        kfree(cmdline);
+        kfree(cmdline);//liberar memoria
         return NULL;
     }
 
