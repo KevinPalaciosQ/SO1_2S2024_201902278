@@ -2,8 +2,8 @@
 
 # Lista de imagenes
 images=(
-    "low_image"
-    "high_image"
+    "low.py"
+    "high.py"
 )
 
 # Crear una lista de 10 imagenes seleccionadas aleatoriamente
