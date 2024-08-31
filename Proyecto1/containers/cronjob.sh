@@ -1,1 +1,6 @@
-//ejecutar el script.sh cada 30 segundos
+#!/bin/bash
+
+while true; do
+    /path/to/your/script.sh
+    sleep 60
+done
