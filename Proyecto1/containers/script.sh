@@ -1,12 +1,12 @@
 #!/bin/bash
 
-# Lista de imagenes
+# Lista de imágenes
 images=(
     "low.py"
     "high.py"
 )
 
-# Crear una lista de 10 imagenes seleccionadas aleatoriamente
+# Crear una lista de 10 imágenes seleccionadas aleatoriamente
 selected_images=()
 for ((i=0; i<10; i++)); do
     selected_images+=("${images[RANDOM % ${#images[@]}]}")
