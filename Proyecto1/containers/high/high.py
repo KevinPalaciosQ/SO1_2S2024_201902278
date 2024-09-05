@@ -1,7 +1,4 @@
-import time
-import math
+import random
 
-while True:
-    for _ in range(1000000):
-        list = [math.sqrt(1) for i in range (1000)]
-        time.sleep(0.1)
+large_list = [random.randint(0, 1000000) for _ in range(100000000)]
+large_list.sort()

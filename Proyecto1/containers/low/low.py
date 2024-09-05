@@ -1,10 +1,10 @@
-from flask import Flask
+import time
 
-app = Flask(__name__)
-
-@app.route('/')
-def hello_world():
-    return 'Hello, World!'
+def show_time():
+    while True:
+        current_time = time.strftime("%H:%M:%S")
+        print(f"Current Time: {current_time}", end='\r')
+        time.sleep(1)  # Actualiza cada segundo
 
 if __name__ == '__main__':
-    app.run(host='0.0.0.0')
+    show_time()
