@@ -1,10 +1,11 @@
-import time
+# Script de bajo consumo usando Flask
+from flask import Flask
 
-def show_time():
-    while True:
-        current_time = time.strftime("%H:%M:%S")
-        print(f"Current Time: {current_time}", end='\r')
-        time.sleep(1)  # Actualiza cada segundo
+app = Flask(__name__)
+
+@app.route('/')
+def hello_world():
+    return 'Hola, son un contenedor de bajo consumo'
 
 if __name__ == '__main__':
-    show_time()
+    app.run(host='0.0.0.0')

@@ -4,6 +4,9 @@
 # 👨‍🏫 Aux. Alvaro Garcia
 # 🏫 Sección A
 # 📂 Proyecto 1
+|🎓Nombre                           |📛Carné       |
+|-----------------------------------|--------------|
+| Kevin Estuardo Palacios Quiñonez  | 201902278    |
 # Manual Técnico
 ## 📚 Contenido
 1. [🎯 Objetivo](#-objetivo-del-proyecto)
@@ -52,3 +55,30 @@ El proyecto usa una combinación de tecnologías modernas y robustar para crear 
 
 Estos comandos proporcionan una guía básica para la instanciación y configuración de los componentes necesarios para la plataforma de monitoreo de procesos en un entorno Linux.
 
+##### **Módulos del Kernel de Linux:**
+
+```bash
+make
+sudo insmod sysinfo_201902278.ko
+lsmod | grep sysinfo_201902278
+```
+### 🐳Contenedores 
+**Instalar Docker:**
+```bash
+sudo apt update
+sudo apt install docker.io
+sudo systemctl start docker
+sudo systemctl enable docker
+```
+
+### Creación del Backend con Python  🐍
+**Instalar Python:**
+```bash
+mkdir servidor && cd servidor && python3 -m venv venv && source venv/bin/activate && pip install Flask && echo -e 'FROM python:3.9-slim\nWORKDIR /app\nCOPY . /app\nRUN pip install Flask\nCMD ["flask", "run", "--host=0.0.0.0"]' > Dockerfile
+```
+### Creación del Servicio con Rust 
+**Instalar Rust:**
+```bash
+curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh -s -- -y && source $HOME/.cargo/env && mkdir service && cd service && cargo init
+```
+# 🖥 Flujo de proyecto
