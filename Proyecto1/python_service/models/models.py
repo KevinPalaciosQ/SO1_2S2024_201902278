@@ -11,3 +11,14 @@ class LogProcess(BaseModel):
     cpu_usage: float
     action: str
     timestamp: str
+
+
+class MemoryStats(BaseModel):
+    total_ram: int
+    free_ram: int
+    used_ram: int
+
+class Data(BaseModel):
+    memorystats: MemoryStats
+    processes: list
+    

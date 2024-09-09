@@ -11,7 +11,6 @@ app = FastAPI()
 def read_root():
     return {"Hello": "World"}
 
-@app.get("/graph")
 
 @app.post("/logs")
 def get_logs(logs_proc: List[LogProcess]):

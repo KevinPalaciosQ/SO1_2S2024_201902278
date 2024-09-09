@@ -107,7 +107,6 @@ fn kill_container(id: &str) -> std::process::Output {
 
 
 
-
 fn analyzer(system_info: SystemInfo) {
     println!("Total RAM: {}, Free RAM: {}, Used RAM: {}", system_info.system_info.total_ram, system_info.system_info.free_ram, system_info.system_info.used_ram);
     
