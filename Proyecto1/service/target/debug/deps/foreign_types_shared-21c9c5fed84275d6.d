@@ -1,0 +1,7 @@
+/home/kev/Documentos/SO1_2S2024_201902278/Proyecto1/service/target/debug/deps/libforeign_types_shared-21c9c5fed84275d6.rmeta: /home/kev/.cargo/registry/src/index.crates.io-6f17d22bba15001f/foreign-types-shared-0.1.1/src/lib.rs
+
+/home/kev/Documentos/SO1_2S2024_201902278/Proyecto1/service/target/debug/deps/libforeign_types_shared-21c9c5fed84275d6.rlib: /home/kev/.cargo/registry/src/index.crates.io-6f17d22bba15001f/foreign-types-shared-0.1.1/src/lib.rs
+
+/home/kev/Documentos/SO1_2S2024_201902278/Proyecto1/service/target/debug/deps/foreign_types_shared-21c9c5fed84275d6.d: /home/kev/.cargo/registry/src/index.crates.io-6f17d22bba15001f/foreign-types-shared-0.1.1/src/lib.rs
+
+/home/kev/.cargo/registry/src/index.crates.io-6f17d22bba15001f/foreign-types-shared-0.1.1/src/lib.rs:
