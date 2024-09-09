@@ -105,46 +105,8 @@ fn kill_container(id: &str) -> std::process::Output {
     output
 }
 
-async fn post_memory_info(memory_info :MemoryInfo) -> Result<(), Box<dyn std::error::Error>>{
-    let client = Client::new();
-    let url = "http://localhost:8000/logsRAM"; 
-    let memory = MEMO {
-        total_ram: memory_info.total_ram,
-        free_ram: memory_info.free_ram,
-        used_ram: memory_info.used_ram,
-    };
 
-    let response = client.post(url)
-        .json(&memory)
-        .send()
-        .await?;
 
-    if response.status().is_success() {
-        println!("Logs enviados con éxito");
-    } else {
-        eprintln!("Error al enviar logs: {}", response.status());
-    }
-
-    Ok(())
-}
-
-async fn send_logs_to_server(logs_proc: Vec<LogProcess>) -> Result<(), Box<dyn std::error::Error>> {
-    let client = Client::new();
-    
-    let url = "http://localhost:8000/logs"; 
-    let response = client.post(url)
-        .json(&logs_proc)
-        .send()
-        .await?;
-
-    if response.status().is_success() {
-        println!("Logs enviados con éxito");
-    } else {
-        eprintln!("Error al enviar logs: {}", response.status());
-    }
-
-    Ok(())
-}
 
 fn analyzer(system_info: SystemInfo) {
     println!("Total RAM: {}, Free RAM: {}, Used RAM: {}", system_info.system_info.total_ram, system_info.system_info.free_ram, system_info.system_info.used_ram);
@@ -165,7 +127,7 @@ fn analyzer(system_info: SystemInfo) {
 
     for process in processes_list.iter() {
         let entrar = process.clone();
-        if process.memory_usage > 0.5 || process.cpu_usage > 0.8 {
+        if  process.cpu_usage > 0.08 {
             highest_list.push(entrar);
         } else {
             lowest_list.push(entrar);
@@ -298,7 +260,7 @@ async fn main() -> Result<(), Error>  {
             match rx.try_recv() {
                 Ok(_) | Err(mpsc::TryRecvError::Disconnected) => {
                     println!("Interrupción recibida. El programa se está terminando.");
-                    let url = "http://localhost:8000/graficar"; 
+                    let url = "http://localhost:8000/graph"; 
                     
                     let response = reqwest::get(url).await?;
 
