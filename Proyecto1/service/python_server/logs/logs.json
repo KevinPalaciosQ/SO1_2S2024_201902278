@@ -1,0 +1,220 @@
+[
+    {
+        "timestamp": "2024-09-10T02:25:42.633528602+00:00",
+        "memorystats": {
+            "total_ram": 16139168,
+            "free_ram": 6817968,
+            "used_ram": 9321200
+        },
+        "processes": [
+            {
+                "pid": 75234,
+                "name": "containerd-shim",
+                "cmdline": "/snap/docker/2932/bin/containerd-shim-runc-v2 -namespace moby -id bd8904f4bd8dbce8a1141705d50b9c339745805b17cecdcacba3183d6982bda5 -address /run/snap.docker/containerd/containerd.sock ",
+                "vsz": 719820,
+                "rss": 11008,
+                "memory_usage": 0.06,
+                "cpu_usage": 0.04
+            },
+            {
+                "pid": 75305,
+                "name": "containerd-shim",
+                "cmdline": "/snap/docker/2932/bin/containerd-shim-runc-v2 -namespace moby -id d8c056c7d3489eab2e260621993c79579135b4fa7c1398ceb3ca4271be67bb19 -address /run/snap.docker/containerd/containerd.sock ",
+                "vsz": 719820,
+                "rss": 10752,
+                "memory_usage": 0.06,
+                "cpu_usage": 0.04
+            },
+            {
+                "pid": 75381,
+                "name": "containerd-shim",
+                "cmdline": "/snap/docker/2932/bin/containerd-shim-runc-v2 -namespace moby -id 28d7825645c477197d52e0e791e19147739fcdde05acd73041877aa24d8b456a -address /run/snap.docker/containerd/containerd.sock ",
+                "vsz": 719820,
+                "rss": 10880,
+                "memory_usage": 0.06,
+                "cpu_usage": 0.04
+            },
+            {
+                "pid": 75504,
+                "name": "containerd-shim",
+                "cmdline": "/snap/docker/2932/bin/containerd-shim-runc-v2 -namespace moby -id 1ce92d5da117bd744c0c7144354422e633b41627e22e4178b52ad060dfec1cf1 -address /run/snap.docker/containerd/containerd.sock ",
+                "vsz": 719564,
+                "rss": 11136,
+                "memory_usage": 0.06,
+                "cpu_usage": 0.04
+            },
+            {
+                "pid": 74903,
+                "name": "containerd-shim",
+                "cmdline": "/snap/docker/2932/bin/containerd-shim-runc-v2 -namespace moby -id ea3aba26e15ba036f8d56e233f8d146a24185e6174ed2331e25d8f80fcf05f97 -address /run/snap.docker/containerd/containerd.sock ",
+                "vsz": 719884,
+                "rss": 11008,
+                "memory_usage": 0.06,
+                "cpu_usage": 0.06
+            },
+            {
+                "pid": 74983,
+                "name": "containerd-shim",
+                "cmdline": "/snap/docker/2932/bin/containerd-shim-runc-v2 -namespace moby -id 83368cf53f369b4513c938538754b431b7627e2655472252a4d066d527be5043 -address /run/snap.docker/containerd/containerd.sock ",
+                "vsz": 719820,
+                "rss": 11008,
+                "memory_usage": 0.06,
+                "cpu_usage": 0.06
+            },
+            {
+                "pid": 75443,
+                "name": "containerd-shim",
+                "cmdline": "/snap/docker/2932/bin/containerd-shim-runc-v2 -namespace moby -id 9bdd35cf7938a1f1774e575e3176e739d6c1f55dd661d3fb445ae709c7e28067 -address /run/snap.docker/containerd/containerd.sock ",
+                "vsz": 719820,
+                "rss": 10752,
+                "memory_usage": 0.06,
+                "cpu_usage": 0.06
+            }
+        ]
+    },
+    {
+        "timestamp": "2024-09-10T02:25:53.788365931+00:00",
+        "memorystats": {
+            "total_ram": 16139168,
+            "free_ram": 7953212,
+            "used_ram": 8185956
+        },
+        "processes": []
+    },
+    {
+        "timestamp": "2024-09-10T02:26:03.796601527+00:00",
+        "memorystats": {
+            "total_ram": 16139168,
+            "free_ram": 7957108,
+            "used_ram": 8182060
+        },
+        "processes": []
+    },
+    {
+        "timestamp": "2024-09-10T02:26:13.808702335+00:00",
+        "memorystats": {
+            "total_ram": 16139168,
+            "free_ram": 7916388,
+            "used_ram": 8222780
+        },
+        "processes": []
+    },
+    {
+        "timestamp": "2024-09-10T02:26:23.813538018+00:00",
+        "memorystats": {
+            "total_ram": 16139168,
+            "free_ram": 7975888,
+            "used_ram": 8163280
+        },
+        "processes": []
+    },
+    {
+        "timestamp": "2024-09-10T02:26:33.821979889+00:00",
+        "memorystats": {
+            "total_ram": 16139168,
+            "free_ram": 8090088,
+            "used_ram": 8049080
+        },
+        "processes": []
+    },
+    {
+        "timestamp": "2024-09-10T02:26:43.831704003+00:00",
+        "memorystats": {
+            "total_ram": 16139168,
+            "free_ram": 6896692,
+            "used_ram": 9242476
+        },
+        "processes": [
+            {
+                "pid": 77082,
+                "name": "containerd-shim",
+                "cmdline": "/snap/docker/2932/bin/containerd-shim-runc-v2 -namespace moby -id 9a082c4f41ee60771dbfe2b4f06a0ed605af58f08f526576d33e826e64bb3291 -address /run/snap.docker/containerd/containerd.sock ",
+                "vsz": 719820,
+                "rss": 11008,
+                "memory_usage": 0.06,
+                "cpu_usage": 0.02
+            },
+            {
+                "pid": 75047,
+                "name": "containerd-shim",
+                "cmdline": "/snap/docker/2932/bin/containerd-shim-runc-v2 -namespace moby -id 21630164d3a235e85e26248e87378dc170b6b530b36bfafc7b063d70083189f0 -address /run/snap.docker/containerd/containerd.sock ",
+                "vsz": 719820,
+                "rss": 11348,
+                "memory_usage": 0.07,
+                "cpu_usage": 0.04
+            },
+            {
+                "pid": 75110,
+                "name": "containerd-shim",
+                "cmdline": "/snap/docker/2932/bin/containerd-shim-runc-v2 -namespace moby -id 4c8b671879e38b455323419ad870b9ccf0527d77d037154b08f2b43c5bb3a6f0 -address /run/snap.docker/containerd/containerd.sock ",
+                "vsz": 719820,
+                "rss": 11636,
+                "memory_usage": 0.07,
+                "cpu_usage": 0.04
+            },
+            {
+                "pid": 75172,
+                "name": "containerd-shim",
+                "cmdline": "/snap/docker/2932/bin/containerd-shim-runc-v2 -namespace moby -id a5f889be5c088f3e103cc980a51c7d38fe25ef85c9e696009be3d556fb0aef48 -address /run/snap.docker/containerd/containerd.sock ",
+                "vsz": 719820,
+                "rss": 11696,
+                "memory_usage": 0.07,
+                "cpu_usage": 0.04
+            },
+            {
+                "pid": 76702,
+                "name": "containerd-shim",
+                "cmdline": "/snap/docker/2932/bin/containerd-shim-runc-v2 -namespace moby -id d59f483ef677187acc8e3ab5d237d6f90c0e67393108eec30218e012d55f196c -address /run/snap.docker/containerd/containerd.sock ",
+                "vsz": 719820,
+                "rss": 11264,
+                "memory_usage": 0.06,
+                "cpu_usage": 0.04
+            },
+            {
+                "pid": 76837,
+                "name": "containerd-shim",
+                "cmdline": "/snap/docker/2932/bin/containerd-shim-runc-v2 -namespace moby -id c689186d6753f050c711b641a25e57968ed1b053b41b41a8ba8e49368f451763 -address /run/snap.docker/containerd/containerd.sock ",
+                "vsz": 719500,
+                "rss": 10368,
+                "memory_usage": 0.06,
+                "cpu_usage": 0.04
+            },
+            {
+                "pid": 76899,
+                "name": "containerd-shim",
+                "cmdline": "/snap/docker/2932/bin/containerd-shim-runc-v2 -namespace moby -id 980229c241b6fc3804e6730ae9fababc04cbe4ad598f6bb09fac9f9632dae5e3 -address /run/snap.docker/containerd/containerd.sock ",
+                "vsz": 719820,
+                "rss": 10880,
+                "memory_usage": 0.06,
+                "cpu_usage": 0.04
+            },
+            {
+                "pid": 76961,
+                "name": "containerd-shim",
+                "cmdline": "/snap/docker/2932/bin/containerd-shim-runc-v2 -namespace moby -id 5e73abef97ce86e7f40ea7ea499a2bec4a5e15ebbb1640a0375628e207550117 -address /run/snap.docker/containerd/containerd.sock ",
+                "vsz": 719564,
+                "rss": 10880,
+                "memory_usage": 0.06,
+                "cpu_usage": 0.04
+            },
+            {
+                "pid": 77023,
+                "name": "containerd-shim",
+                "cmdline": "/snap/docker/2932/bin/containerd-shim-runc-v2 -namespace moby -id 6cbd02c3cc0ec7ed71ec132cc1e46addcd612e84fff8e027845e3bda599d940d -address /run/snap.docker/containerd/containerd.sock ",
+                "vsz": 719820,
+                "rss": 11264,
+                "memory_usage": 0.06,
+                "cpu_usage": 0.04
+            },
+            {
+                "pid": 76632,
+                "name": "containerd-shim",
+                "cmdline": "/snap/docker/2932/bin/containerd-shim-runc-v2 -namespace moby -id b30bc6a49e503f7031aefec97bc7523ddfc062dd8c2f19e0f34cbd6a820dfc55 -address /run/snap.docker/containerd/containerd.sock ",
+                "vsz": 719564,
+                "rss": 11008,
+                "memory_usage": 0.06,
+                "cpu_usage": 0.06
+            }
+        ]
+    }
+]

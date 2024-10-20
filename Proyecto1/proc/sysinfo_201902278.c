@@ -71,6 +71,7 @@ static char *get_process_cmdline(struct task_struct *task) {
 }
 
 // Función que muestra información del sistema en formato JSON
+// Función que muestra información del sistema en formato JSON
 static int sysinfo_show(struct seq_file *m, void *v) {
     struct sysinfo si;
     struct task_struct *task;
@@ -81,13 +82,13 @@ static int sysinfo_show(struct seq_file *m, void *v) {
 
     // Iniciar la escritura del JSON
     seq_printf(m, "{\n");
-    seq_printf(m, "  \"MemoryStats\": {\n");
-    seq_printf(m, "    \"Total_RAM\": %lu,\n", si.totalram << (PAGE_SHIFT - 10));  // Total RAM en KB
-    seq_printf(m, "    \"Free_RAM\": %lu,\n", si.freeram << (PAGE_SHIFT - 10));    // RAM libre en KB
-    seq_printf(m, "    \"Used_RAM\": %lu\n", (si.totalram - si.freeram) << (PAGE_SHIFT - 10));  // RAM usada en KB
+    seq_printf(m, "  \"memorystats\": {\n");  // Cambiado a "memorystats"
+    seq_printf(m, "    \"total_ram\": %lu,\n", si.totalram << (PAGE_SHIFT - 10));  // Total RAM en KB
+    seq_printf(m, "    \"free_ram\": %lu,\n", si.freeram << (PAGE_SHIFT - 10));    // RAM libre en KB
+    seq_printf(m, "    \"used_ram\": %lu\n", (si.totalram - si.freeram) << (PAGE_SHIFT - 10));  // RAM usada en KB
     seq_printf(m, "  },\n");
 
-    seq_printf(m, "  \"Processes\": [\n");
+    seq_printf(m, "  \"processes\": [\n");
 
     for_each_process(task) {  // Recorrer todos los procesos
         if (strcmp(task->comm, "containerd-shim") == 0) {
@@ -116,13 +117,13 @@ static int sysinfo_show(struct seq_file *m, void *v) {
 
             // Escribir la información del proceso en formato JSON
             seq_printf(m, "    {\n");
-            seq_printf(m, "      \"PID\": %d,\n", task->pid);
-            seq_printf(m, "      \"Name\": \"%s\",\n", task->comm);
-            seq_printf(m, "      \"Cmdline\": \"%s\",\n", cmdline ? cmdline : "N/A");
-            seq_printf(m, "      \"Vsz\": \"%lu\",\n", vsz);
-            seq_printf(m, "      \"Rss\": \"%lu\",\n", rss);
-            seq_printf(m, "      \"MemoryUsage\": %lu.%02lu,\n", mem_usage / 100, mem_usage % 100);
-            seq_printf(m, "      \"CPUUsage\": %lu.%02lu\n", cpu_usage / 100, cpu_usage % 100);
+            seq_printf(m, "      \"pid\": %d,\n", task->pid);
+            seq_printf(m, "      \"name\": \"%s\",\n", task->comm);
+            seq_printf(m, "      \"cmdline\": \"%s\",\n", cmdline ? cmdline : "N/A");
+            seq_printf(m, "      \"vsz\": %lu,\n", vsz);  // Cambiado a "vsz"
+            seq_printf(m, "      \"rss\": %lu,\n", rss);  // Cambiado a "rss"
+            seq_printf(m, "      \"memory_usage\": %lu.%02lu,\n", mem_usage / 100, mem_usage % 100);  // Cambiado a "memory_usage"
+            seq_printf(m, "      \"cpu_usage\": %lu.%02lu\n", cpu_usage / 100, cpu_usage % 100);
             seq_printf(m, "    }");
 
             // Liberar la memoria de la línea de comandos
@@ -135,6 +136,7 @@ static int sysinfo_show(struct seq_file *m, void *v) {
     seq_printf(m, "\n  ]\n}\n");  // Cierre del JSON
     return 0;
 }
+
 
 // Función que se llama cuando se abre el archivo /proc
 static int sysinfo_open(struct inode *inode, struct file *file) {

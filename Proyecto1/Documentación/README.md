@@ -82,3 +82,6 @@ mkdir servidor && cd servidor && python3 -m venv venv && source venv/bin/activat
 curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh -s -- -y && source $HOME/.cargo/env && mkdir service && cd service && cargo init
 ```
 # 🖥 Flujo de proyecto
+# 1. Realizar la instalaciónd el modulo de Kernel 
+# 2. Levantar Rust, ya que este ejecuta el cronjob y levanta con docker compose la imagen de pyhon.
+
