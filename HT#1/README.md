@@ -221,3 +221,7 @@ CMD ["./main"]
 
 ```
 ## Verificación de los Endpoinds
+recibir estudiantes http://35.193.240.41/loadStudents
+![recibir](recibirEstudiante.jpeg)
+enviar estudiantes http://35.193.240.41/receiveStudent
+![enviar](enviarestudiante.jpeg)
