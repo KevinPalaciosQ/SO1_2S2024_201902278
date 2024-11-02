@@ -1,0 +1,23 @@
+syntax = "proto3";
+
+package studentpb;
+
+option go_package = "./;studentpb";
+
+// Mensaje que representa un estudiante
+message Student {
+    string name = 1;   // Nombre del estudiante
+    int32 age = 2;        // Edad del estudiante
+    string faculty = 3;   // Facultad del estudiante
+    int32 discipline = 4; // Disciplina del estudiante
+}
+
+// Servicio gRPC que define las operaciones
+service StudentService {
+    rpc SendStudentData(Student) returns (Response);
+}
+
+// Respuesta del servidor
+message Response {
+    string message = 1;   // Mensaje de respuesta del servidor
+}
