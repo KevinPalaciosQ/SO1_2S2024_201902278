@@ -1,0 +1,31 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: faculty-service
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      app: faculty-service
+  template:
+    metadata:
+      labels:
+        app: faculty-service
+    spec:
+      containers:
+      - name: faculty-service
+        image: your-docker-repo/faculty-service:latest
+        ports:
+        - containerPort: 8080
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: faculty-service
+spec:
+  type: ClusterIP
+  ports:
+  - port: 8080
+    targetPort: 8080
+  selector:
+    app: faculty-service
