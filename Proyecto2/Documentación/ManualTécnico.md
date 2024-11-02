@@ -221,10 +221,10 @@ kubectl get pods
 ```
 
 # Flujo del Proyecto
-Locust genera tráfico.
-Ingress redirige las peticiones a los servicios de facultades.
-Servicios de facultades envían solicitudes a los servicios de disciplinas.
-Servicios de disciplinas determinan ganadores/perdedores y publican resultados en Kafka.
-Consumidores procesan resultados y almacenan en Redis.
-Grafana visualiza los resultados en tiempo real.
-Prometheus monitorea y recopila métricas del clúster.
+1. Locust genera tráfico.
+2. Ingress redirige las peticiones a los servicios de facultades.
+3. Servicios de facultades envían solicitudes a los servicios de disciplinas.
+4. Servicios de disciplinas determinan ganadores/perdedores y publican resultados en Kafka.
+5. Consumidores procesan resultados y almacenan en Redis.
+6. Grafana visualiza los resultados en tiempo real.
+7. Prometheus monitorea y recopila métricas del clúster.
